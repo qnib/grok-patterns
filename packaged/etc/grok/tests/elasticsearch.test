@@ -1,0 +1,5 @@
+[shards]
+comp_line=%{ES_SHARDS}
+input=shards [3]/[3]
+result={"ES_SHARDS":["shards [3]/[3]"], "INT:es_shards_exp":["3"], "INT:es_shards_got":["3"]}
+
