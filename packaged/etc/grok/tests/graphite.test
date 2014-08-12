@@ -1,27 +1,27 @@
 [singlular_metric]
 comp_line=%{GRAPHITE_METRIC:val1}
 input=metric
-result={"GRAPHITE_METRIC:val1":["metric"]}
+result={"val1":["metric"]}
 
 [multi_metric]
 comp_line=%{GRAPHITE_METRIC:val1}
 input=some.path.to.a.metric
-result={"GRAPHITE_METRIC:val1":["some.path.to.a.metric"]}
+result={"val1":["some.path.to.a.metric"]}
 
 [fqdn_metric]
 comp_line=%{GRAPHITE_METRIC:val1}
 input=carbon.agents.server-c0.cpuUsage
-result={"GRAPHITE_METRIC:val1":["carbon.agents.server-c0.cpuUsage"]}
+result={"val1":["carbon.agents.server-c0.cpuUsage"]}
 
 [regex_metric]
 comp_line=%{GRAPHITE_METRIC:val1}
 input=diamond.server.iostat.sd[a-z].util_percentage
-result={"GRAPHITE_METRIC:val1":["diamond.server.iostat.sd[a-z].util_percentage"]}
+result={"val1":["diamond.server.iostat.sd[a-z].util_percentage"]}
 
 [func_metric]
 comp_line=%{GRAPHITE_METRIC:val1}
 input=aliasByNode(stacked(diamond.server.cpu.total.*),4)
-result={"GRAPHITE_METRIC:val1":["aliasByNode(stacked(diamond.server.cpu.total.*),4)"]}
+result={"val1":["aliasByNode(stacked(diamond.server.cpu.total.*),4)"]}
 
 [fail_pure_metric]
 comp_line=^%{GRAPHITE_METRIC:val1}$
@@ -31,19 +31,19 @@ result=FAIL
 [total_rendering]
 comp_line=.*Total%{SPACE}rendering%{SPACE}time%{SPACE}%{BASE16FLOAT:render_total_sec}%{SPACE}seconds
 input=Total rendering time 0.037640 seconds
-result={"BASE16FLOAT:render_total_sec":["0.037640"]}
+result={"render_total_sec":["0.037640"]}
 
 [png_rendering]
 comp_line=.*Rendered%{SPACE}PNG%{SPACE}in%{SPACE}%{BASE16FLOAT:render_png_sec}%{SPACE}seconds
 input=Rendered PNG in 0.027004 seconds
-result={"BASE16FLOAT:render_png_sec":["0.027004"]}
+result={"render_png_sec":["0.027004"]}
 
 [carbonlink_datapoints]
 comp_line=.*CarbonLink%{SPACE}cache-query%{SPACE}request%{SPACE}for%{SPACE}%{GRAPHITE_METRIC:metric_key}%{SPACE}returned%{SPACE}%{INT:cache_hits}%{SPACE}datapoints
 input=CarbonLink cache-query request for servers.server.cpu.total.guest_nice returned 1 datapoints
-result={"GRAPHITE_METRIC:metric_key":["servers.server.cpu.total.guest_nice"], "INT:cache_hits":["1"]}
+result={"metric_key":["servers.server.cpu.total.guest_nice"], "cache_hits":["1"]}
 
 [metric_retrieval]
 comp_line=.*Retrieval%{SPACE}of%{SPACE}%{GRAPHITE_METRIC:metric_key}%{SPACE}took%{SPACE}%{BASE16FLOAT:metric_retrieval_sec}
 input=Retrieval of stats.timers.logstash.server.render.png.count took 0.002087
-result={"GRAPHITE_METRIC:metric_key":["stats.timers.logstash.server.render.png.count"], "BASE16FLOAT:metric_retrieval_sec":["0.002087"]}
+result={"metric_key":["stats.timers.logstash.server.render.png.count"], "metric_retrieval_sec":["0.002087"]}

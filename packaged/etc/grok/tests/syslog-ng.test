@@ -1,62 +1,62 @@
 [sysng_proc_dst_d_lmgt]
 comp_line=%{SNG_P_DST_LMGT}
 input=processed=\'destination(d_logmgmt)=103\'
-result={"INT:sysng_proc_dst_d_lmgt": ["103"], "SNG_P_DST_LMGT": ["processed='destination(d_logmgmt)=103'"]}
+result={"sysng_proc_dst_d_lmgt": ["103"], "SNG_P_DST_LMGT": ["processed='destination(d_logmgmt)=103'"]}
 
 [SNG_P_DST_TCP]
 comp_line=%{SNG_P_DST_TCP}
 input=processed=\'dst.tcp(d_logmgmt#0,172.17.0.31:5514)=103\'
-result={"INT:sysng_proc_dst_tcp": ["103"], "SNG_P_DST_TCP": ["processed='dst.tcp(d_logmgmt#0,172.17.0.31:5514)=103'"]}
+result={"sysng_proc_dst_tcp": ["103"], "SNG_P_DST_TCP": ["processed='dst.tcp(d_logmgmt#0,172.17.0.31:5514)=103'"]}
 
 [SNG_P_SRC_INT]
 comp_line=%{SNG_P_SRC_INT}
 input=processed=\'src.internal(s_sys#2)=99\'
-result={"INT:sysng_proc_src_int": ["99"], "SNG_P_SRC_INT": ["processed='src.internal(s_sys#2)=99'"]}
+result={"sysng_proc_src_int": ["99"], "SNG_P_SRC_INT": ["processed='src.internal(s_sys#2)=99'"]}
 
 [SNG_P_CENT_RCV]
 comp_line=%{SNG_P_CENT_RCV}
 input=processed=\'center(received)=99\'
-result={"INT:sysng_proc_center_rcv": ["99"], "SNG_P_CENT_RCV": ["processed='center(received)=99'"]}
+result={"sysng_proc_center_rcv": ["99"], "SNG_P_CENT_RCV": ["processed='center(received)=99'"]}
 
 [SNG_P_CENT_QUEUED]
 comp_line=%{SNG_P_CENT_QUEUED}
 input=processed=\'center(queued)=103\'
-result={"INT:sysng_proc_center_queued": ["103"], "SNG_P_CENT_QUEUED": ["processed='center(queued)=103'"]}
+result={"sysng_proc_center_queued": ["103"], "SNG_P_CENT_QUEUED": ["processed='center(queued)=103'"]}
 
 [SNG_P_GLOB_PAY_REALLOC]
 comp_line=%{SNG_P_GLOB_PAY_REALLOC}
 input=processed=\'global(payload_reallocs)=194\'
-result={"INT:sysng_proc_global_pat_realloc": ["194"], "SNG_P_GLOB_PAY_REALLOC": ["processed='global(payload_reallocs)=194'"]}
+result={"sysng_proc_global_pat_realloc": ["194"], "SNG_P_GLOB_PAY_REALLOC": ["processed='global(payload_reallocs)=194'"]}
 
 [SNG_P_GLOB_SDAT_UPDATES]
 comp_line=%{SNG_P_GLOB_SDAT_UPDATES}
 input=processed=\'global(sdata_updates)=0\'
-result={"INT:sysng_proc_global_sdat_updates": ["0"], "SNG_P_GLOB_SDAT_UPDATES": ["processed='global(sdata_updates)=0'"]}
+result={"sysng_proc_global_sdat_updates": ["0"], "SNG_P_GLOB_SDAT_UPDATES": ["processed='global(sdata_updates)=0'"]}
 
 [SNG_P_GLOB_MSG_CLONES]
 comp_line=%{SNG_P_GLOB_MSG_CLONES}
 input=processed=\'global(msg_clones)=0\'
-result={"INT:sysng_proc_global_msg_clones": ["0"], "SNG_P_GLOB_MSG_CLONES": ["processed='global(msg_clones)=0'"]}
+result={"sysng_proc_global_msg_clones": ["0"], "SNG_P_GLOB_MSG_CLONES": ["processed='global(msg_clones)=0'"]}
 
 [SNG_P_SRC_S_SYS]
 comp_line=%{SNG_P_SRC_S_SYS}
 input=processed=\'source(s_sys)=99\'
-result={"INT:sysng_proc_src_s_sys": ["99"], "SNG_P_SRC_S_SYS": ["processed='source(s_sys)=99'"]}
+result={"sysng_proc_src_s_sys": ["99"], "SNG_P_SRC_S_SYS": ["processed='source(s_sys)=99'"]}
 
 [SNG_D_DST_TCP]
 comp_line=%{SNG_D_DST_TCP}
 input=dropped=\'dst.tcp(d_logmgmt#0,172.17.0.31:5514)=0\'
-result={"INT:sysng_drop_dst_tcp": ["0"], "SNG_D_DST_TCP": ["dropped='dst.tcp(d_logmgmt#0,172.17.0.31:5514)=0'"]}
+result={"sysng_drop_dst_tcp": ["0"], "SNG_D_DST_TCP": ["dropped='dst.tcp(d_logmgmt#0,172.17.0.31:5514)=0'"]}
 
 [SNG_S_DST_TCP]
 comp_line=%{SNG_S_DST_TCP}
 input=stored=\'dst.tcp(d_logmgmt#0,172.17.0.31:5514)=0\'
-result={"INT:sysng_stored_dst_tcp": ["0"], "SNG_S_DST_TCP": ["stored='dst.tcp(d_logmgmt#0,172.17.0.31:5514)=0'"]}
+result={"sysng_stored_dst_tcp": ["0"], "SNG_S_DST_TCP": ["stored='dst.tcp(d_logmgmt#0,172.17.0.31:5514)=0'"]}
 
 [SNG_T_SRC_INT]
 comp_line=%{SNG_T_SRC_INT}
 input=stamp=\'src.internal(s_sys#2)=1405579940\'
-result={"INT:sysng_stamp_src_int": ["1405579940"], "SNG_T_SRC_INT": ["stamp='src.internal(s_sys#2)=1405579940'"]}
+result={"sysng_stamp_src_int": ["1405579940"], "SNG_T_SRC_INT": ["stamp='src.internal(s_sys#2)=1405579940'"]}
 
 #[]
 #comp_line=%{}
