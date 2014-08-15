@@ -1,0 +1,44 @@
+[slurm_level]
+comp_line=%{SLURM_LEVEL}
+input=fatal
+result={"SLURM_LEVEL": ["fatal"]}
+
+[slurm_node_list_1]
+comp_line=%{SLURM_NODE_LIST}
+input=node1,node2
+result={"SLURM_NODE_LIST": ["node1,node2"]}
+
+[slurm_node_list_2]
+comp_line=%{SLURM_NODE_LIST}
+input=node[1-2]
+result={"SLURM_NODE_LIST": ["node[1-2]"]}
+
+[slurm_func]
+comp_line=%{SLURM_FUNC}
+input=node_xy_func
+result={"SLURM_FUNC": ["node_xy_func"]}
+
+[sctld_msg]
+comp_line=%{SCTLD_MSG}
+input=slurmctld: sched: Backfill scheduler plugin loaded
+result={"SCTLD_MSG": ["sched: Backfill scheduler plugin loaded"], "sd_msg": ["Backfill scheduler plugin loaded"], "slurm_level": ["sched"]}
+
+[sctld_rpc_alloc_res]
+comp_line=%{SLURM_RPC_ALLOC_RES}
+input=_slurm_rpc_allocate_resources JobId=3 NodeList=compute0 usec=3437
+result={"SLURM_RPC_ALLOC_RES": ["JobId=3 NodeList=compute0 usec=3437"], "slurm_jobid": ["3"], "slurm_node_list": ["compute0"], "slurm_shed_usec": ["3437"]}
+
+[sctld_rpc_step_complete]
+comp_line=%{SLURM_RPC_STEP_COMPLETE}
+input=sched: _slurm_rpc_step_complete StepId=3.0 usec=2071
+result={"SLURM_RPC_STEP_COMPLETE": ["StepId=3.0 usec=2071"], "slurm_shed_usec": ["2071"], "slurm_stepid": ["3.0"]}
+
+[sctld_rpc_job_step_create]
+comp_line=%{SLURM_RPC_JOB_STEP_CREATE}
+input=_slurm_rpc_job_step_create: StepId=7.0 compute0 usec=3579
+result={"SLURM_RPC_JOB_STEP_CREATE": ["StepId=7.0 compute0 usec=3579"], "slurm_node_list": ["compute0"], "slurm_shed_usec": ["3579"], "slurm_stepid": ["7.0"]}
+
+[slurm_job_complete]
+comp_line=%{SLURM_JOB_COMPLETE}
+input=job_complete for JobId=8 successful, exit code=0
+result={"SLURM_JOB_COMPLETE": ["for JobId=8 successful, exit code=0"], "slurm_job_exit_code": ["0"], "slurm_jobid": ["8"]}
