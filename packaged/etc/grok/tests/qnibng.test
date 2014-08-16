@@ -3,10 +3,11 @@ comp_line=%{BASE16FLOAT}
 input=0.007380
 result={"BASE16FLOAT": ["0.007380"]}
 
+
 [qnibng_sweep_time]
 comp_line=%{QNG_SWEEP_TIME}
 input=PerfMgr total sweep time 0.012323 sec
-result={"QNG_SWEEP_TIME": ["PerfMgr total sweep time 0.012323 sec"], "sweep_time": ["0.012323"]}
+result={"QNG_SWEEP_TIME": ["PerfMgr total sweep time 0.012323 sec"],"sweep_time": ["0.012323"]}
 
 #[]
 #comp_line=%{}
