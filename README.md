@@ -35,6 +35,6 @@ input=metric
 result={"GRAPHITE_METRIC:val1":["metric"]}
 ```
 
--comp_line defines the GROK pattern to apply.
--input sets the input line to parse
--result will be compared against the json result returned by the grok-parsing
+- comp_line defines the GROK pattern to apply.
+- input sets the input line to parse
+- result will be compared against the json result returned by the grok-parsing
